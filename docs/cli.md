@@ -93,7 +93,7 @@ It has some basic language detection and add extra task depending of the languag
 
 ### Resolve
 
-`tkn-pac resolve`: will run a pipelinerun as if it were executed by pipelines as code on service. It will try to detect the current git information if you run the command from your source code. To make it works you need to push the current revision to the target git repository and iterate the pipelinerun change with the `tkn-pac resolve` command. For example if you have a pipelinerun in the `.tekton/pull-request.yaml` file you can run the command `tkn-pac resolve` to see it running:
+`tkn pac resolve`: will run a pipelinerun as if it were executed by pipelines as code on service. It will try to detect the current git information if you run the command from your source code. To make it works you need to push the current revision to the target git repository and iterate the pipelinerun change with the `tkn-pac resolve` command. For example if you have a pipelinerun in the `.tekton/pull-request.yaml` file you can run the command `tkn-pac resolve` to see it running:
 
 ```yaml
 tkn pac resolve -f .tekton/pull-request.yaml|kubectl apply -f -
